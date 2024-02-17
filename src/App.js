@@ -7,10 +7,13 @@ import Resume from './components/Main/Resume/resume';
 function App() {
   return (
     <div>
-      <Header />
+      <div style={{height: '6em'}} >
+        <Header />
+      </div>
+      
       <Router>
         <Routes>
-          <Route path='/home' element={<Home />} />
+          <Route path='/' element={<Home />} />
           <Route path='/resume' element={<Resume />} />
         </Routes>
       </Router>

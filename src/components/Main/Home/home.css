@@ -1,0 +1,10 @@
+h1 {
+  margin-right: auto;
+  font-size: 36px;
+}
+
+
+.social-links {
+    margin-top: 40px;
+    display: flex;
+}
