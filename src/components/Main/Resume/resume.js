@@ -3,11 +3,23 @@ import ListItem from '@mui/material/ListItem';
 import ListItemIcon from '@mui/material/ListItemIcon';
 import ListItemText from '@mui/material/ListItemText';
 import FolderOpenIcon from '@mui/icons-material/FolderOpen';
+import { Box, ThemeProvider, createTheme } from '@mui/system';
 
 import './resume.css'
 
+const theme = createTheme({
+    palette: {
+        text: {
+            primary: 'black',
+            secondary: 'black,'
+        }
+    }
+
+});
+
 export default function Resume(){
     return(
+        <ThemeProvider theme={theme}>
         <div class="resume">
             <div class="about">
                 <div class="aboutText">
@@ -35,7 +47,8 @@ export default function Resume(){
             <div class="experience">
                 <List sx={{ 
                         width: '100%', 
-                        maxWidth: 360
+                        maxWidth: 360,
+                        bgcolor: 'primary.main'
                     }}
                 >
                     <ListItem>
@@ -88,5 +101,6 @@ export default function Resume(){
             </div>
             
         </div>
+        </ThemeProvider>
     );
 }
